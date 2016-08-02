@@ -7,14 +7,14 @@ class a
     public $origin = array(
     array(1, 1, 0, 0, 0, 0, 0, 0, 0, 0),
     array(1, 1, 0, 1, 1, 0, 0, 0, 0, 0),
-    array(1, 0, 0, 1, 1, 0, 0, 0, 0, 0),
+    array(0, 0, 0, 1, 1, 0, 0, 0, 0, 0),
     array(0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
     array(1, 1, 1, 1, 1, 0, 0, 0, 0, 0),
     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-    array(1, 0, 0, 0, 1, 0, 0, 1, 1, 1),
-    array(1, 0, 0, 0, 1, 0, 0, 1, 1, 1),
-    array(1, 0, 0, 0, 1, 0, 0, 1, 1, 1),
-    array(1, 1, 0, 1, 1, 0, 0, 0, 0, 1)
+    array(1, 1, 1, 0, 0, 1, 0, 1, 1, 1),
+    array(1, 0, 1, 0, 0, 1, 0, 1, 0, 1),
+    array(1, 0, 1, 1, 0, 1, 0, 1, 1, 1),
+    array(1, 1, 0, 0, 1, 1, 1, 0, 0, 0)
     );
 
     function find($x,$y)
@@ -206,7 +206,7 @@ for($p = 0;$p<count($newarray);$p++)
         $RA = "false";
      
     }
-    else if($maxnum == count($newarray[$p]))
+    if($maxnum == count($newarray[$p]))
     {
         if($RA == "false")
         {
@@ -222,7 +222,7 @@ for($p = 0;$p<count($newarray);$p++)
     
 }
 //最大區塊不只一塊將輸
-if($bors > count($maxbluck))
+if($bors >= count($maxbluck))
 {
     $maxbluck = $ag;
 }
